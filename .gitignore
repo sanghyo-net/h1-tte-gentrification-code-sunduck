@@ -1,0 +1,9 @@
+api_key.md
+.env
+key.env
+.streamlit/secrets.toml
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
