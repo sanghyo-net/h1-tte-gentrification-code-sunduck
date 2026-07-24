@@ -1099,8 +1099,9 @@ if chat_column is not None:
             )
             if dashboard_brief_key != st.session_state.dashboard_brief_key:
                 st.session_state.dashboard_brief_key = dashboard_brief_key
-                st.session_state.dashboard_brief_pending = True
-                st.rerun()
+                # 대시보드 변경 시 자동 API 호출을 하지 않습니다.
+                # 사용자가 채팅을 전송할 때만 OpenAI API를 호출합니다.
+                st.session_state.dashboard_brief_pending = False
         else:
             st.session_state.dashboard_brief_key = ""
             st.session_state.dashboard_brief_pending = False
